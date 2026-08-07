@@ -18,8 +18,6 @@ public class CustomerController {
     public CustomerController(CustomerService customerService) {
 
         this.customerService = customerService;
-
-        System.out.println("This is for testing");
     }
     
 
