@@ -19,6 +19,7 @@ public class CustomerController {
 
         this.customerService = customerService;
     }
+    
 
     @PostMapping("/create-customer")
     public String addUser(@Valid @RequestBody CustomerDto customerDto) {
@@ -37,8 +38,9 @@ public class CustomerController {
     }
 
     @DeleteMapping("/delete-particular-customer/{userId}")
-    public String deleteUser(@PathVariable Long userId){
-        return customerService.deleteData(userId);
+    public void deleteUser(@PathVariable Long userId){
+//        return customerService.deleteData(userId);
+        System.out.println(customerService.deleteData(userId));
     }
 
     @PutMapping("/update-particular-customer/{id}")
