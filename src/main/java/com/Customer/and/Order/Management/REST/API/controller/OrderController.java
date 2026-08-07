@@ -17,6 +17,7 @@ public class OrderController {
 
     public OrderController(OrderService orderService) {
         this.orderService = orderService;
+        System.out.println("printed customer service");
     }
 
     @PostMapping("/create-order")
